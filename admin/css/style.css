@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Google Sans', sans-serif;
+    margin: 0;
+  }
+  
+  .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+   
+  .sidebar a.active {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 200px;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 700px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    .sidebar a {float: left;}
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    .sidebar a {
+      text-align: center;
+      float: none;
+    }
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    width: 150px; /* İsteğe bağlı olarak label genişliğini ayarlayın */
+    margin-right: 10px;
+    text-align: right;
+  }
+  
+  .form-group input {
+    /* flex: 1; */
+    padding: 5px;
+  }
+  
+  .form-group button:hover {
+    background-color: #218838;
+  }
+  
+  .form-group .button-container {
+    width: 250px; /* Butonun hizalanması için genişlik ayarlaması */
+    display: flex;
+  }
